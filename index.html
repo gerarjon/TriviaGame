@@ -4,42 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Reset CSS-->
+    <!-- Reset CSS -->
     <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Title -->
     <title>Trivia Game</title>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- JavaSCript -->
-    <script src="assets/javascript/app.js"></script>
 </head>
 <body>
     <div class="wrapper">
-        <!-- Heading/Logo section -->
-        <div class="header">
-            <div class="title">
-                <h1>Who wants to be a Millionaire?</h1>
-            </div>
+        <div id="logo" class="title-container text-center">
+            <a href="index.html"><img src="assets/images/Yugioh-Game-Title.png" alt="Gerar's Yugioh Trivia Extravaganza"></a>
         </div>
-        <!-- Content -->
-        <div class="container">
-            <!-- Timer -->
-            <div class="timer-container">
-                <div id="timer"></div>
+        <div class="content-container">
+            <div class="rules-container">
+                <h1 class="text-center">Rules:</h1>
+                <ul>
+                    <li class=>Answer the 10 questions in this trivia game.</li>
+                    <li>You have 30 seconds to answer each question.</li>
+                    <li>Press "Start" to begin!</li>
+                </ul>
+                <div class="text-center">
+                    <button id="start-button" class="start">Start</button>
+                </div>
             </div>
-            <!-- Question -->
-            <div class="question-container">
-                <div id="question">What is this questions?</div>
-            </div>
-            <!-- Answers -->
-            <div class="answer-container">
-                <div id="answer"></div>
-            </div>
+            <div id="question-container"></div>
         </div>
     </div>
-    
-    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script src="assets/javascript/app.js"></script>
 </body>
 </html>
