@@ -22,6 +22,22 @@ var questions = [{
     question: "How tall is Yugi Moto?",
     answers: ["5'0", "4'11", "5'2", "4'8"],
     correctAnswer: "5'0",
+},  {
+    question: "If your opponent just activated the spell card \"Dark Hole\", what would be the best card to negate the effect of \"Dark Hole\" if both you and your opponent have no cards in your hand(s)?",
+    answers: ["Anti-Spell Fragrance", "Magic Jammer", "Goblin Out of the Frying Pan", "Magic Drain"],
+    correctAnswer: "Goblin Out of the Frying Pan",
+}, {
+    question: "Which of the following cards has the highest ORIGINAL ATK? (This can also include cards exclusive to the OCG, effects of cards that increase original ATK are considered negated.)",
+    answers: ["Rocket Arrow Express", "Five Headed Dragon", "Dragon Master Knight", "All of the above"],
+    correctAnswer: "All of the above",
+}, {
+    question: "Who is big brother?",
+    answers: ["Seto Kaiba", "Tristan Taylor", "Marik Ishtar", "Bandit Keith"],
+    correctAnswer: "Seto Kaiba",
+}, {
+    question: "What is the name of the motorbikes used in Yugioh 5d's?",
+    answers: ["Duel Accelerators", "Duel Runners", "Sonic Duelers", "Duel Disks"],
+    correctAnswer: "Duel Runners",
 }];
 var gameHTML;
 var theClock;
@@ -94,7 +110,7 @@ var game = {
         // if
         questionCounter++;
         console.log(questionCounter);
-        if ( questionCounter < 5 ) {
+        if ( questionCounter < questions.length ) {
             counter = 15;
             game.generateQuestion();
         }

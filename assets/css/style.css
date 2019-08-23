@@ -68,7 +68,7 @@ h3 {
 /* START OF CONTENT CONTAINER */
 .content-container {
     background: url("../images/cubes.png");
-    margin: 1REM 0.5rem;
+    margin: 1rem 0.5rem;
     padding: 1rem .5rem;
     border-radius: 10px;
 }
