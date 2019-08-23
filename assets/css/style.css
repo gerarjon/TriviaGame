@@ -72,6 +72,10 @@ h3 {
     padding: 1rem .5rem;
     border-radius: 10px;
 }
+/* Gifs */
+.gif {
+    width: 90%;
+}
 /* END OF CONTENT CONTAINER */
 
 /* START OF RULES */

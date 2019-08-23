@@ -5,39 +5,47 @@ var questions = [{
     question: "What is the full name of Exodia?",
     answers: ["Exodia, The Forbidden One", "Exodia, The Forgotten One", "Exodia, The Exalted One", "Exodia Winged Dragon of Ra"],
     correctAnswer: "Exodia, The Forbidden One",
-    // image:,
+    image: "assets/images/gifs/exodia.gif",
 }, {
     question: "What does the card \"Pot of Greed\" do?",
     answers: ["Lets you draw 2 cards", "Lets you draw 1 card", "Wins you the game", "Sends the card on top of your opponent's deck to the graveyard"],
     correctAnswer: "Lets you draw 2 cards",
+    image: "assets/images/gifs/pot-of-greed.gif",
 }, {
     question: "How many \"Blue-Eyes White Dragon\" cards does Kaiba own?",
     answers: ["He has 4", "He has 3", "He has 5", "Mokuba has them"],
     correctAnswer: "He has 3",
+    image: "assets/images/gifs/blue-eyes-rip.gif",
 }, {
     question: "What is Jaiden Yuki's \"Ace\" card?",
     answers: ["Elemental Hero Flame Wingman", "Winged Kuriboh", "Polymerization", "Elemental Hero Neos"],
     correctAnswer: "Elemental Hero Neos",
+    image: "assets/images/gifs/neos.gif"
 }, {
     question: "How tall is Yugi Moto?",
     answers: ["5'0", "4'11", "5'2", "4'8"],
     correctAnswer: "5'0",
+    image: "assets/images/gifs/yugi.gif"
 },  {
     question: "If your opponent just activated the spell card \"Dark Hole\", what would be the best card to negate the effect of \"Dark Hole\" if both you and your opponent have no cards in your hand(s)?",
     answers: ["Anti-Spell Fragrance", "Magic Jammer", "Goblin Out of the Frying Pan", "Magic Drain"],
     correctAnswer: "Goblin Out of the Frying Pan",
+    image: "assets/images/goblin-card.png"
 }, {
     question: "Which of the following cards has the highest ORIGINAL ATK? (This can also include cards exclusive to the OCG, effects of cards that increase original ATK are considered negated.)",
     answers: ["Rocket Arrow Express", "Five Headed Dragon", "Dragon Master Knight", "All of the above"],
     correctAnswer: "All of the above",
+    image: "assets/images/dgm.png"
 }, {
     question: "Who is big brother?",
     answers: ["Seto Kaiba", "Tristan Taylor", "Marik Ishtar", "Bandit Keith"],
     correctAnswer: "Seto Kaiba",
+    image: "assets/images/gifs/kaiba.gif"
 }, {
     question: "What is the name of the motorbikes used in Yugioh 5d's?",
     answers: ["Duel Accelerators", "Duel Runners", "Sonic Duelers", "Duel Disks"],
     correctAnswer: "Duel Runners",
+    image: "assets/images/gifs/duel-runner.gif"
 }];
 var gameHTML;
 var theClock;
@@ -84,7 +92,7 @@ var game = {
         winSound.play();
         console.log("correct!");
         correct++;
-        gameHTML = `<h2>Nice job!</h2><p>The answer was "${questions[questionCounter].correctAnswer}"</p>`
+        gameHTML = `<h2>Nice job!</h2><p>The answer was "${questions[questionCounter].correctAnswer}"</p><br><img class="gif" src="${questions[questionCounter].image}">`
         qcontainer.html(gameHTML);
         setTimeout(game.wait, 3000);
     },
@@ -93,7 +101,7 @@ var game = {
         loseSound.play();
         console.log("You lose!");
         incorrect++;
-        gameHTML = `<h2>Not so good....</h2><p>The correct answer was "${questions[questionCounter].correctAnswer}"</p>`;
+        gameHTML = `<h2>Not so good....</h2><p>The correct answer was "${questions[questionCounter].correctAnswer}"</p><br><img class="gif" src="${questions[questionCounter].image}">`;
         qcontainer.html(gameHTML);
         setTimeout(game.wait, 3000)
     },
@@ -101,7 +109,7 @@ var game = {
     timeUp: () => {
         loseSound.play();
         unanswered++;
-        gameHTML = `<h2>Time's up!</h2><p><p>The correct answer was "${questions[questionCounter].correctAnswer}"</p>`;
+        gameHTML = `<h2>Time's up!</h2><p><p>The correct answer was "${questions[questionCounter].correctAnswer}"</p><br><img class="gif" src="${questions[questionCounter].image}">`;
         qcontainer.html(gameHTML);
         setTimeout(game.wait, 3000)
     },
