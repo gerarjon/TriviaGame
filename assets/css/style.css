@@ -11,21 +11,20 @@ body {
     background-position:center;
     font-family: 'Poppins', sans-serif, 'Courier New', Courier, monospace;
     font-size: 1.5rem;
-    line-height: 1.9rem;
     color: #1b1b1b;
 }
 h1 {
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     font-weight: 800;
     padding-bottom: 1rem;
 }
 h2 {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     font-weight: 500;
     padding-bottom: 1rem;
 }
 h3 {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 300;
 }
 .text-center {
@@ -37,7 +36,7 @@ h3 {
 .loading-gif {
     display: block;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 3rem 0;    
 }
 /* START OF TITLE */
 .title-container img {
@@ -95,6 +94,15 @@ h3 {
     background-repeat: no-repeat;
 }
 /* END OF RULES */
+
+/* START OF ANSWER BUTTON */
+.answer-button {
+    margin: 0 auto;
+    margin-bottom: 0.4rem;
+    padding: 0.5rem 0.2rem;
+    font-size: 1rem;
+}
+/* END OF ANSWER BUTTON */
 
 @media only screen and (min-width: 768px) {
     body {
