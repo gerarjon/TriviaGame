@@ -12,8 +12,8 @@ var questions = [{
     correctAnswer: "Lets you draw 2 cards",
 }, {
     question: "How many \"Blue-Eyes White Dragon\" cards does Kaiba own?",
-    answers: ["4", "3", "5", "Mokuba has them"],
-    correctAnswer: "3",
+    answers: ["He has 4", "He has 3", "He has 5", "Mokuba has them"],
+    correctAnswer: "He has 3",
 }, {
     question: "What is Jaiden Yuki's \"Ace\" card?",
     answers: ["Elemental Hero Flame Wingman", "Winged Kuriboh", "Polymerization", "Elemental Hero Neos"],
