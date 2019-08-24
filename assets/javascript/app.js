@@ -47,6 +47,8 @@ var questions = [{
     correctAnswer: "Duel Runners",
     image: "assets/images/gifs/duel-runner.gif"
 }];
+// Global Variables
+//===============================================
 var gameHTML;
 var theClock;
 var counter = 15;
@@ -80,6 +82,7 @@ var game = {
     // Function that posts a question
     generateQuestion: () => {
         game.timeCountdown();
+        // Writes "Time Remaining: (time)"
         qcontainer.html(`<h3 class="text-center">Time Remaining: <span class="timer red">15</span></h3><br><h2 class="text-center">Question: ${questions[questionCounter].question}</h2>`);
         // Loop through the answers
         for ( var i = 0; i < questions[questionCounter].answers.length; i++) {
@@ -90,7 +93,6 @@ var game = {
     // Function that writes the answer
     generateWin: () => {
         winSound.play();
-        console.log("correct!");
         correct++;
         gameHTML = `<h2>Nice job!</h2><p>The answer was "${questions[questionCounter].correctAnswer}"</p><br><img class="gif" src="${questions[questionCounter].image}">`
         qcontainer.html(gameHTML);
@@ -99,7 +101,6 @@ var game = {
     // Function that tells the answer when they pick the wrong one
     generateLoss: () => {
         loseSound.play();
-        console.log("You lose!");
         incorrect++;
         gameHTML = `<h2>Not so good....</h2><p>The correct answer was "${questions[questionCounter].correctAnswer}"</p><br><img class="gif" src="${questions[questionCounter].image}">`;
         qcontainer.html(gameHTML);
@@ -113,11 +114,9 @@ var game = {
         qcontainer.html(gameHTML);
         setTimeout(game.wait, 3000)
     },
-    // Checks to see if there is more questions
+    // Checks to see if there are more questions
     wait: () => {
-        // if
         questionCounter++;
-        console.log(questionCounter);
         if ( questionCounter < questions.length ) {
             counter = 15;
             game.generateQuestion();
@@ -130,7 +129,6 @@ var game = {
     endScreen: () => {
         endSound.play();
         qcontainer.empty();
-        console.log("the end");
         pFinish = `<h1>Finish!!!</h1>`
         pWin = `<h2>Correct Answers: ${correct}</h2>`;
         pLose = `<h2>Wrong Answers: ${incorrect}</h2>`;
@@ -182,6 +180,5 @@ $(document).on("click", ".answer-button", function(event) {
         clearInterval(theClock),
         game.generateLoss()
     )
-    console.log(questions[questionCounter].correctAnswer);
 })
 });
